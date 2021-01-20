@@ -34,24 +34,33 @@
                         <div class="panel-content">
                             <?php 
                             
-                            $nav = ['Главная', 'PHP', 'Функция'];
-                            $ulist = "<ol class='breadcrumb page-breadcrumb'>";
-                            foreach ($nav as $element) {
-                                if ($element == 'Функция') {
-                                    $ulist .= "<li class='breadcrumb-item active'>$element</li>";
-                                }
-                                else {
-                                    $ulist .= "<li class='breadcrumb-item'><a href='#'>$element</a></li>";
-                                } 
-                            };
-                            $ulist .= "</ol>";
-                            echo $ulist;
+                            $navs = [
+                                [
+                                 'title' =>  'Главная',
+                                 'href' => "#",
+                                 'active' => True
+                                ],
+                                [
+                                'title' =>  'PHP',
+                                'href' => "#",
+                                'active' => True
+                                ],
+                                [
+                                'title' =>  'Функция',
+                                'href' => "",
+                                'active' => False
+                                ],
+                            ];
                             ?>
-                            <!-- <ol class="breadcrumb page-breadcrumb">
-                                <li class="breadcrumb-item"><a href="#">Главная</a></li>
-                                <li class="breadcrumb-item"><a href="#">PHP</a></li>
-                                <li class="breadcrumb-item active">Функции</li>
-                            </ol> -->
+                            <ol class="breadcrumb page-breadcrumb">
+                            <?php foreach ($navs as $nav): ?>
+                                <?php if ($nav['active'] == False): ?>
+                                    <li class="breadcrumb-item active"><?php echo $nav["title"] ?></li>
+                                <?php else: ?>
+                                    <li class="breadcrumb-item"><a href='<?php echo $nav["href"] ?>'><?php echo $nav["title"] ?></a></li>
+                                <?php endif; ?>
+                            <?php endforeach; ?>
+                            </ol>
                         </div>
                     </div>
                 </div>

@@ -1,11 +1,3 @@
-<?php
-
-require_once 'include/database.php';
-require_once 'include/functions.php';
-$all_info = get_info($link);
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -57,6 +49,22 @@ $all_info = get_info($link);
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <?php 
+                                    $link = mysqli_connect('localhost', 'root', 'root', 'my_data');
+
+                                    function get_info($link) {
+                                        $sql = "SELECT * FROM `form`";
+                                    
+                                        $result = mysqli_query($link, $sql);
+                                    
+                                        $categories = mysqli_fetch_all($result, MYSQLI_ASSOC);
+                                    
+                                        return $categories;
+                                    }
+                                    
+                                    $all_info = get_info($link);
+
+                                    ?>
 
                                     <?php foreach ($all_info as $info) : ?>
                                         <tr>

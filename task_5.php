@@ -35,111 +35,64 @@
                 <div class="panel-container show">
                     <div class="panel-content">
                         <div class="d-flex flex-wrap demo demo-h-spacing mt-3 mb-3">
-                                <?php
+                            <?php
 
-                                $flex = '<div class="rounded-pill bg-white shadow-sm p-2 border-faded mr-3 d-flex flex-row align-items-center justify-content-center flex-shrink-0">';
-                                $mens = ['Sunny', 'Jos', 'Jovanni', 'Roberto'];
-                                $A['Sunny'] = [
-                                    'image'     => '<img src="img/demo/authors/sunny.png" alt="Sunny A." class="img-thumbnail img-responsive rounded-circle" style="width:5rem; height: 5rem;">',
+                            $flex = '<div class="rounded-pill bg-white shadow-sm p-2 border-faded mr-3 d-flex flex-row align-items-center justify-content-center flex-shrink-0">';
+                            $mens = ['Sunny', 'Jos', 'Jovanni', 'Roberto'];
+                            $people = [
+                                [
+                                    'name'      => 'Sunny',
+                                    'image'     => 'img/demo/authors/sunny.png',
                                     'position1' => 'Sunny A. (UI/UX Expert)',
                                     'position2' => 'Lead Author',
-                                    'contacts'  => [
-                                        '<a href="https://twitter.com/@myplaneticket" class="text-info fs-sm" target="_blank">@myplaneticket</a> - ',
-                                        '<a href="https://wrapbootstrap.com/user/myorange" class="text-info fs-sm" target="_blank" title="Contact Sunny"><i class="fal fa-envelope"></i></a>'
-                                    ],
-                                ];
-                                $A['Jos'] = [
-                                    'image'     => '<img src="img/demo/authors/josh.png" alt="Jos K." class="img-thumbnail img-responsive rounded-circle" style="width:5rem; height: 5rem;">',
+                                    'contact1'  => "https://twitter.com/@myplaneticket",
+                                    'contact2'  => "https://wrapbootstrap.com/user/myorange"
+                                ],
+                                [
+                                    'name'      => 'Jos',
+                                    'image'     => "img/demo/authors/josh.png",
                                     'position1' => 'Jos K. (ASP.NET Developer)',
                                     'position2' => 'Partner &amp; Contributor',
-                                    'contacts'  => [
-                                        '<a href="https://twitter.com/@atlantez" class="text-info fs-sm" target="_blank">@atlantez</a> - ',
-                                        '<a href="https://wrapbootstrap.com/user/Walapa" class="text-info fs-sm" target="_blank" title="Contact Jos"><i class="fal fa-envelope"></i></a>'
-                                    ],
-                                ];
-                                $A['Jovanni'] = [
-                                    'image'     => '<img src="img/demo/authors/jovanni.png" alt="Jovanni Lo" class="img-thumbnail img-responsive rounded-circle" style="width:5rem; height: 5rem;">',
+                                    'contact1'  => "https://twitter.com/@atlantez",
+                                    'contact2'  => "https://wrapbootstrap.com/user/Walapa"
+                                ],
+                                [
+                                    'name'      => 'Jovanni',
+                                    'image'     => "img/demo/authors/jovanni.png",
                                     'position1' => 'Jovanni L. (PHP Developer)',
                                     'position2' => 'Partner &amp; Contributor',
-                                    'contacts'  => [
-                                        '<a href="https://twitter.com/@lodev09" class="text-info fs-sm" target="_blank">@lodev09</a> - ',
-                                        '<a href="https://wrapbootstrap.com/user/lodev09" class="text-info fs-sm" target="_blank" title="Contact Jovanni"><i class="fal fa-envelope"></i></a>'
-                                    ],
-                                ];
-                                $A['Roberto'] = [
-                                    'image'     => '<img src="img/demo/authors/roberto.png" alt="Jovanni Lo" class="img-thumbnail img-responsive rounded-circle" style="width:5rem; height: 5rem;">',
+                                    'contact1'  => "https://twitter.com/@lodev09",
+                                    'contact2'  => "https://wrapbootstrap.com/user/lodev09"
+                                ],
+                                [
+                                    'name'      => 'Roberto',
+                                    'image'     => "img/demo/authors/roberto.png",
                                     'position1' => 'Roberto R. (Rails Developer)',
                                     'position2' => 'Partner &amp; Contributor',
-                                    'contacts'  => [
-                                        '<a href="https://twitter.com/@sildur" class="text-info fs-sm" target="_blank">@sildur</a> - ',
-                                        '<a href="https://wrapbootstrap.com/user/sildur" class="text-info fs-sm" target="_blank" title="Contact Roberto"><i class="fal fa-envelope"></i></a>'
-                                    ],
-                                ];
-
-                                foreach ($mens as $man) {
-                                    if ($man == 'Sunny') {
-                                        echo $flex;
-                                        print_r($A[$man]['image']);
-                                        echo "<div class='ml-2 mr-3'>",
-                                             "<h5 class='m-0'>",
-                                             $A[$man]['position1'];
-                                        echo "<small class='m-0 fw-300'>",
-                                             $A[$man]['position2'],
-                                             "</small>";
-                                        echo "</h5>";
-                                        echo $A[$man]['contacts'][0],
-                                             $A[$man]['contacts'][1];
-                                        echo "</div>",
-                                             "</div>";
-                                    } elseif ($man == 'Jos') {
-                                        echo $flex;
-                                        print_r($A[$man]['image']);
-                                        echo "<div class='ml-2 mr-3'>",
-                                             "<h5 class='m-0'>",
-                                             $A[$man]['position1'];
-                                        echo "<small class='m-0 fw-300'>",
-                                             $A[$man]['position2'],
-                                             "</small>";
-                                        echo "</h5>";
-                                        echo $A[$man]['contacts'][0],
-                                             $A[$man]['contacts'][1];
-                                        echo "</div>",
-                                             "</div>";
-                                    } elseif ($man == 'Jovanni') {
-                                        echo $flex;
-                                        print_r($A[$man]['image']);
-                                        echo "<div class='ml-2 mr-3'>",
-                                             "<h5 class='m-0'>",
-                                             $A[$man]['position1'];
-                                        echo "<small class='m-0 fw-300'>",
-                                             $A[$man]['position2'],
-                                             "</small>";
-                                        echo "</h5>";
-                                        echo $A[$man]['contacts'][0],
-                                             $A[$man]['contacts'][1];
-                                        echo "</div>",
-                                             "</div>";
-                                    } elseif ($man == 'Roberto') {
-                                        echo $flex;
-                                        print_r($A[$man]['image']);
-                                        echo "<div class='ml-2 mr-3'>",
-                                             "<h5 class='m-0'>",
-                                             $A[$man]['position1'];
-                                        echo "<small class='m-0 fw-300'>",
-                                             $A[$man]['position2'],
-                                             "</small>";
-                                        echo "</h5>";
-                                        echo $A[$man]['contacts'][0],
-                                             $A[$man]['contacts'][1];
-                                        echo "</div>",
-                                             "</div>";
-                                    }
-                                }
-                                ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                                    'contacts'  => "https://twitter.com/@sildur",
+                                    'contact2'  => "https://wrapbootstrap.com/user/sildur"
+                                ],
+                            ];
+                            ?>
+                            <?php foreach ($people as $man): ?>
+                            <div class="rounded-pill bg-white shadow-sm p-2 border-faded mr-3 d-flex flex-row align-items-center justify-content-center flex-shrink-0">
+                                <img src='<?php echo $man['image'] ?>' alt="Sunny A." class="img-thumbnail img-responsive rounded-circle" style="width:5rem; height: 5rem;">
+                                <div class="ml-2 mr-3">
+                                    <h5 class="m-0">
+                                    <?php echo $man['position1'] ?>
+                                        <small class="m-0 fw-300">
+                                        <?php echo $man['position2'] ?>
+                                        </small>
+                                    </h5>
+                                    <a href="<?php echo $man['contact1'] ?>" class="text-info fs-sm" target="_blank">@myplaneticket</a> -
+                                    <a href="<?php echo $man['contact2'] ?>" class="text-info fs-sm" target="_blank" title="Contact Sunny"><i class="fal fa-envelope"></i></a>
+                                </div>
+                            </div>
+                            <?php endforeach; ?>
+        </div>
+        </div>
+        </div>
+        </div>
     </main>
 
 
